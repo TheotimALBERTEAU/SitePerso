@@ -9,4 +9,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'SitePerso';
+
+  onClickCV() {
+    window.open('cv.pdf', '_self')
+  }
 }
