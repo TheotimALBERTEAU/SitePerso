@@ -6,13 +6,25 @@
   --dark: #344D59;
 }
 
+* {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .header_container {
   background-color: var(--dark);
   color: var(--light);
 
   display: flex;
-  padding: 1vh;
+  padding: 0.5vh;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 8vh;
 }
 
 .header_left {
@@ -24,15 +36,32 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 1vh;
-  gap: 1vw;
 
   align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5vh 1vw;
+  line-height: 1;
+  z-index: 20;
+}
+
+.dropdown-menu {
+  display: flex; /* Horizontal on desktop */
+  align-items: center;
+  gap: 0.5vw; /* Inherit the gap from header_right */
 }
 
 .header_button {
   display: flex;
   align-items: center;
-  padding: 2vh 2.5vw;
+  padding: 1.2vh 1.2vw;
 
   background-color: var(--primary);
   border: none;
@@ -41,9 +70,66 @@
 
   color: var(--light);
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 0.85vw;
 }
 
 .header_button:hover {
   background-color: var(--secondary);
+}
+
+.header_separator {
+  width: 3px;
+  height: 5vh;
+  background-color: var(--primary);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .header_right {
+    gap: 0;
+    height: auto;
+    margin-right: 0.5vh;
+  }
+
+  /* 1. Show the menu toggle icon */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* 2. Style the dropdown container */
+  .dropdown-menu {
+    display: none; /* Hide menu by default */
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: var(--dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    padding: 1vh 0;
+  }
+
+  /* 3. State when the menu is active */
+  .dropdown-menu.is-open {
+    display: flex;
+  }
+
+  /* 4. Adjust button appearance for mobile list */
+  .header_button {
+    width: 95%;
+    margin: 0.5vh auto;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1.5vh 0;
+  }
+
+  /* 5. Disable separator entirely on mobile */
+  .header_separator {
+    display: none;
+  }
 }
