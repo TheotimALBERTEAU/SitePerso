@@ -1,5 +1,6 @@
 import {Component, computed, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  constructor(private router: Router) {
+  }
+
   title = 'SitePerso';
 
   isMenuOpen = signal(false);
@@ -18,6 +22,14 @@ export class AppComponent {
   }
 
   onClickCV() {
-    window.open('cv.pdf', '_self')
+    window.open('cv.pdf')
+  }
+
+  onClickContact() {
+    this.router.navigate(['/Contact'])
+  }
+
+  onClickHome() {
+    this.router.navigate(['/TheotimAlberteau'])
   }
 }

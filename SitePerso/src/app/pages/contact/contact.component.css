@@ -31,7 +31,7 @@
   border: none;
   width: 20vw;
   height: 0.5rem;
-  background-color: var(--primary);
+  background: linear-gradient(90deg, var(--dark), var(--secondary));
   border-radius: 10px;
 }
 
@@ -69,7 +69,7 @@
   gap: 1vw;
   border: none;
   border-radius: 50px;
-  background-color: var(--accent);
+  background: linear-gradient(90deg, var(--dark), var(--secondary));
   cursor: pointer;
 }
 
