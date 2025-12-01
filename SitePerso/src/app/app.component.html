@@ -9,11 +9,18 @@
       <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation"> {{ menuIcon() }} </button>
 
       <div class="dropdown-menu" [class.is-open]="isMenuOpen()">
-        <button class="header_button cv" (click)="onClickCV()">Voir mon CV</button>
+        <button class="header_button cv" (click)="onClickCV()">
+          <img class="header_button_logo" src="/cv.png">
+            Voir mon CV
+        </button>
+
 
         <div class="header_separator"></div>
 
-        <button class="header_button contact">Me Contacter</button>
+        <button class="header_button contact">
+          <img class="header_button_logo" src="/contact.png">
+            Me Contacter
+        </button>
 
       </div>
     </div>

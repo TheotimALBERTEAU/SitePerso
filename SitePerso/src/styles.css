@@ -1,9 +1,9 @@
 :root {
-  --primary: #137C8B;
-  --secondary: #709CA7;
-  --light: #B8CBD0;
-  --accent: #7A90A4;
-  --dark: #344D59;
+  --primary: #adb5bd;
+  --secondary: #6c757d;
+  --light: #f8f9fa;
+  --accent: #495057;
+  --dark: #212529;
 }
 
 * {
@@ -16,7 +16,7 @@ body {
 }
 
 .header_container {
-  background-color: var(--dark);
+  background-color: var(--accent);
   color: var(--light);
 
   display: flex;
@@ -53,9 +53,9 @@ body {
 }
 
 .dropdown-menu {
-  display: flex; /* Horizontal on desktop */
+  display: flex;
   align-items: center;
-  gap: 0.5vw; /* Inherit the gap from header_right */
+  gap: 0.5vw;
 }
 
 .header_button {
@@ -63,7 +63,7 @@ body {
   align-items: center;
   padding: 1.2vh 1.2vw;
 
-  background-color: var(--primary);
+  background-color: transparent;
   border: none;
   border-radius: 6px ;
   outline: none;
@@ -75,6 +75,14 @@ body {
 
 .header_button:hover {
   background-color: var(--secondary);
+}
+
+.header_button_logo {
+  width: 2.5vw;
+  height: auto;
+  padding: 0 0.1vw;
+  transition: filter 0.2s;
+  filter: invert(90%);
 }
 
 .header_separator {
@@ -91,45 +99,61 @@ body {
     margin-right: 0.5vh;
   }
 
-  /* 1. Show the menu toggle icon */
   .menu-toggle {
     display: block;
   }
 
-  /* 2. Style the dropdown container */
   .dropdown-menu {
-    display: none; /* Hide menu by default */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     position: absolute;
     top: 100%;
     right: 0;
-    width: 100%;
-
-    flex-direction: column;
-    align-items: flex-start;
-
-    background-color: var(--dark);
+    width: 30%;
+    background-color: var(--light);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    padding: 1vh 0;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(0px);
+
+    transition: all 0.3s ease;
   }
 
-  /* 3. State when the menu is active */
   .dropdown-menu.is-open {
-    display: flex;
+    max-height: 500px;
+    opacity: 1;
+    padding: 1vh 0;
+    transform: translateY(0);
   }
 
-  /* 4. Adjust button appearance for mobile list */
   .header_button {
     width: 95%;
-    margin: 0.5vh auto;
+    margin: 0.1vh auto;
     justify-content: center;
-    font-size: 1rem;
-    padding: 1.5vh 0;
+    font-size: 0.7rem;
+    padding: 1vh 1vw;
+
+    color: var(--dark);
   }
 
-  /* 5. Disable separator entirely on mobile */
+  .header_button:hover {
+    background-color: transparent;
+    color: var(--accent);
+  }
+
   .header_separator {
     display: none;
+  }
+
+  .header_button_logo {
+    width: 3vw;
+    height: auto;
+    padding: 0 1vw;
+    transition: filter 0.2s;
+    filter: invert(0%);
   }
 }

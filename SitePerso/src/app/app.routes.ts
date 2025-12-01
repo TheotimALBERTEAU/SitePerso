@@ -4,4 +4,5 @@ import {MainPageComponent} from './pages/main-page/main-page.component';
 
 export const routes: Routes = [
   { path : "TheotimAlberteau", component : MainPageComponent },
+  { path : "", component : MainPageComponent },
 ];

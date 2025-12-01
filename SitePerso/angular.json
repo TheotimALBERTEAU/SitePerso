@@ -57,6 +57,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "allowedHosts": ["julieta-prepersuasive-opinionatively.ngrok-free.dev", "localhost"]
+          },
           "configurations": {
             "production": {
               "buildTarget": "SitePerso:build:production"
