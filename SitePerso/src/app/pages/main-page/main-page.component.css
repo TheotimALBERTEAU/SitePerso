@@ -6,7 +6,7 @@
 
 .pres-container {
   display: flex;
-  background-color: var(--light);
+  background-color: var(--neutral);
 
   padding: 1vw 1vw;
   height: 100vh;
@@ -23,6 +23,28 @@
 
 .pres-text {
   display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.left-pres hr{
+  border: none;
+  height: 0.2rem;
+  background: linear-gradient(90deg, var(--dark), var(--secondary));
+  border-radius: 10px;
+}
+
+.first {
+  width: 15vw;
+}
+
+.second {
+  width: 25vw;
+}
+
+.third {
+  width: 20vw;
 }
 
 .right-pres {
@@ -31,5 +53,5 @@
 
 .right-pres img {
   width: 40vw;
-  box-shadow: -2.5px 2.5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
 }
