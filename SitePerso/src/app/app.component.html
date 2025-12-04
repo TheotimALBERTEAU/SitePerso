@@ -9,16 +9,24 @@
       <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation"> {{ menuIcon() }} </button>
 
       <div class="dropdown-menu" [class.is-open]="isMenuOpen()">
+
+        <a href=#Presentation>Présentation</a>
+
+        <div class="header_separator"></div>
+
+        <a href=#Competences>Compétences</a>
+
+        <div class="header_separator"></div>
+
         <button class="header_button cv" (click)="onClickCV()">
-          <img class="header_button_logo" src="/cv.png">
+          <img class="header_button_logo" src="/Assets/CV/cv.png">
             Voir mon CV
         </button>
-
 
         <div class="header_separator"></div>
 
         <button class="header_button contact" (click)="onClickContact()">
-          <img class="header_button_logo" src="/contact.png">
+          <img class="header_button_logo" src="/Assets/Contact/contact.png">
             Me Contacter
         </button>
 

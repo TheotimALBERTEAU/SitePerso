@@ -6,7 +6,7 @@
 
 .contact-container {
   display: flex;
-  background-color: var(--neutral);
+  background-color: var(--light);
 
   height: 100vh;
   align-items: center;
