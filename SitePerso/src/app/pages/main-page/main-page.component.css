@@ -5,99 +5,54 @@
 }
 
 section {
-  padding: 1vw;
-  background-color: var(--light);
+  margin: -4vh 0 4vh 0;
+  height: 100%;
+  min-height: 100vh;
 }
 
 section h2 {
   display: flex;
   justify-content: center;
   font-size: 2rem;
-}
-
-section h1 {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.title{
-  border: none;
-  margin: 0.4rem auto 0 auto;
-  height: 0.2rem;
-  background: linear-gradient(90deg, var(--dark), var(--secondary));
-  border-radius: 10px;
-  width: 70%;
-}
-
-.section-title {
-  border: none;
-  margin: 0.8rem auto 0.8rem auto;
-  height: 0.4rem;
-  background: linear-gradient(90deg, var(--dark), var(--secondary));
-  border-radius: 10px;
-  width: 80%;
+  margin: 4vh;
 }
 
 .pres-container {
   display: flex;
-  background-color: var(--light);
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 10% 10%, var(--accent) 0%, transparent 20%),
+    radial-gradient(circle at 45% 45%, var(--accent) 0%, transparent 20%),
+    radial-gradient(circle at 80% 80%, var(--accent) 0%, transparent 20%);
+  background-color: var(--dark);
 
-  padding: 0 1vw 1vw 1vw;
+  min-height: 100vh;
+
+  padding: 0;
   height: 100vh;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.left-pres {
-  display: flex;
-  align-items: start;
-  gap: 2vh;
-  width: 40%;
-  line-height: 1.6rem;
-}
-
 .pres-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 10vw;
   font-weight: 500;
   font-size: 1.4rem;
 }
 
-.left-pres hr{
-  border: none;
-  margin-top: 0.4rem;
-  height: 0.2rem;
-  background: linear-gradient(90deg, var(--dark), var(--secondary));
-  border-radius: 10px;
-}
-
-.first {
-  width: 15vw;
-}
-
-.second {
-  width: 25vw;
-}
-
-.third {
-  width: 20vw;
-}
-
-.right-pres {
-  justify-content: end;
-}
-
-.right-pres img {
-  width: 40vw;
-  border-radius: 25px;
-}
-
 .card-container {
   display: flex;
+  background: linear-gradient(180deg, var(--neutral), var(--light));
+
   justify-content: center;
+  height: 100%;
   flex-wrap: wrap;
   margin-top: 3vh;
+  min-height: 100vh;
+  align-content: space-evenly;
 }
 
 .card {
@@ -140,6 +95,9 @@ section h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  background: linear-gradient(180deg, var(--dark), var(--secondary));
 }
 
 .mobility-container {
