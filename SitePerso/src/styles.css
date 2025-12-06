@@ -1,10 +1,10 @@
 :root {
-  --primary: #1A73E8;   /* Bleu vif pour l'action et l'accentuation */
+  --primary: #001e43;   /* Bleu vif pour l'action et l'accentuation */
   --secondary: #2C3E50; /* Fond de section contrasté */
   --light: #F5F5F5;     /* Texte clair (sur fonds sombres) */
   --neutral: #7F8C8D;   /* Texte secondaire/Détails */
   --accent: #34495E;    /* Fond principal (header_container) */
-  --dark: #1A242F;      /* Fond de pied de page/Ombres */
+  --dark: #000413;      /* Fond de pied de page/Ombres */
 }
 
 * {
