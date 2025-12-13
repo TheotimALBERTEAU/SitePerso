@@ -44,6 +44,20 @@ section h2 {
   font-size: 1.4rem;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title span:after {
+  content: "Théotim ALBERTEAU";
+  color: #113768;
+  text-shadow: darkblue 0 0 7px;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
 .card-container {
   display: flex;
   background: linear-gradient(180deg, var(--neutral), var(--light));
