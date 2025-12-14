@@ -16,9 +16,19 @@
             Mon travail
           </button>
 
-          <button class="get-in-touch">
+          <button class="get-in-touch" (click)="appComponent.onClickContact()">
             Me contacter
           </button>
+        </div>
+
+        <div class="links">
+          <img src="Assets/icons/github.png" alt="icon-github" class="icon" (click)="OnClickGithub()">
+
+          <img src="Assets/icons/linkedin.png" alt="icon-linkedin" class="icon" (click)="OnClickLinkedin()">
+
+          <a href="mailto:theotim.alberteau@gmail.com?subject=Contact?body=Bonjour,">
+            <img src="Assets/icons/email.png" alt="icon-email" class="icon email-icon">
+          </a>
         </div>
 
       </div>
@@ -26,49 +36,68 @@
 </section>
 
 <section>
-  <div class="hobbies">
-    <div class="card-container">
-      <div class="card">
-        <div class="card-img">
-          <img src="Assets/Hobbies/sport.png" alt="sport-image">
+  <div class="about-me">
+    <h1> A propos
+    <span></span>
+    </h1>
+    <hr>
+    <div class="cards-container">
+      <div class="card large-card">
+        <div class="card-title">
+          Mon parcours
         </div>
         <div class="card-content">
-          <h3>
-            Le sport
-          </h3>
           <p>
-            J'ai fait énormément de sports différents depuis petit, que ce soit en club ou en famille, comme le tennis.
-            J'aime aussi regarder et suivre les compétitions de différents sports, notamment le volley, le foot ou le tennis.
+            Je suis étudiant en 2ème année de développement informatique à Sup De Vinci Nantes,
+            je suis passionné depuis petit d'informatique et pendant le confinement, j'ai commencé le développement,
+            d'abord avec du Scratch puis ensuite avec du python, HTML, CSS ...
+          </p>
+          <br>
+          <p>
+            J'ai plusieurs projets en cours pour m'entrainer, dont ce site, produit en Angular.
+            Mes compétences sont surtout basés sur le stack MEAN (MongoDB, Express, Angular, Nodejs),
+            mais j'ai aussi des compétences dans d'autres langages, comme C#, Python ou MySQL.
           </p>
         </div>
       </div>
 
-      <div class="card">
-        <img src="Assets/Hobbies/informatic.png" alt="sport-image">
-        <div class="card-content">
-          <h3>
-            L'Informatique
-          </h3>
-          <p>
-            L'informatique m'as toujours passionné, que ce soit le développement, les jeux-vidéos, les nouvelles technologies ou autres sujets liés.
-          </p>
+      <div class="cards-grid-right">
+        <div class="card small-card">
+          <div class="card-value">
+            2+
+          </div>
+          <div class="card-content">
+            Années d'études
+          </div>
+        </div>
+
+        <div class="card small-card">
+          <div class="card-value">
+            4+
+          </div>
+          <div class="card-content">
+            Années de pratique
+          </div>
+        </div>
+
+        <div class="card small-card">
+          <div class="card-value">
+            2+
+          </div>
+          <div class="card-content">
+            Projets terminés
+          </div>
+        </div>
+
+        <div class="card small-card">
+          <div class="card-value">
+            5+
+          </div>
+          <div class="card-content">
+            Langages appris
+          </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-img">
-          <img src="Assets/Hobbies/cinema.png" alt="sport-image">
-        </div>
-        <div class="card-content">
-          <h3>
-            Le Cinéma
-          </h3>
-          <p>
-            Depuis quelques années, je me suis mis a regardé de plus en plus de films, que ce soit pour le plaisir ou pour la culture générale.
-          </p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>

@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   onClickCV() {
-    window.open('/SitePerso/Assets/CV/cv.pdf')
+    window.open('Assets/CV/cv.pdf')
   }
 
   onClickContact() {
