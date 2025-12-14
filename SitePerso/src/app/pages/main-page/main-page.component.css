@@ -5,7 +5,6 @@
 }
 
 section {
-  margin: -4vh 0 4vh 0;
   height: 100%;
   min-height: 100vh;
 }
@@ -14,23 +13,22 @@ section h2 {
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  margin: 4vh;
 }
 
 .pres-container {
+  margin-top: -4vh;
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(circle at 10% 10%, var(--primary) 0%, transparent 30%),
-    radial-gradient(circle at 45% 45%, var(--primary) 0%, transparent 15%),
-    radial-gradient(circle at 80% 80%, var(--primary) 0%, transparent 25%);
+    radial-gradient(circle at 10% 10%, var(--primary) 0%, transparent 40%),
+    radial-gradient(circle at 45% 45%, var(--primary) 0%, transparent 25%),
+    radial-gradient(circle at 80% 80%, var(--primary) 0%, transparent 35%);
   background-color: var(--dark);
   color: white;
 
   min-height: 100vh;
 
   padding: 0;
-  height: 100vh;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -51,11 +49,73 @@ section h2 {
 }
 
 .title span:after {
+  padding-left: 0.5rem;
   content: "Théotim ALBERTEAU";
   color: #113768;
   text-shadow: darkblue 0 0 7px;
   font-weight: 600;
   font-size: 4rem;
+}
+
+.pres {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+  padding-top: 7vh;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4vh;
+  gap: 2vw;
+}
+
+.my-work {
+  display: flex;
+  width : 10vw;
+  height: 6vh;
+  justify-content: center;
+  align-items: center;
+
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #113768;
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+.my-work:hover {
+  transform: scale(1.02);
+}
+
+.get-in-touch {
+  display: flex;
+  width : 10vw;
+  height: 6vh;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: rgba(255, 255, 255, 0.1) solid 2px;
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+.get-in-touch:hover {
+  transform: scale(1.02);
 }
 
 .card-container {
@@ -65,7 +125,6 @@ section h2 {
   justify-content: center;
   height: 100%;
   flex-wrap: wrap;
-  margin-top: 3vh;
   min-height: 100vh;
   align-content: space-evenly;
 }
@@ -104,60 +163,4 @@ section h2 {
   color: var(--dark);
   font-size: 1.2rem;
   line-height: 1.3;
-}
-
-.key-infos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  justify-content: space-evenly;
-  background:
-    radial-gradient(circle at 70% 20%, var(--primary) 0%, transparent 20%),
-    radial-gradient(circle at 40% 55%, var(--primary) 0%, transparent 15%),
-    radial-gradient(circle at 20% 80%, var(--primary) 0%, transparent 30%);
-  background-color: var(--dark);
-  color: white;
-}
-
-.mobility-container {
-  margin: 3vh 0;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  gap: 2vh;
-}
-
-.mobility-input {
-  width: 30vw;
-  height: 8vh;
-  border: 2px solid var(--dark);
-  outline: none;
-  padding-left : 2vw;
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--dark);
-  border-radius: 50px;
-  justify-items: center;
-}
-
-.contact-container {
-  margin: 1vh 0;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  gap: 2vh;
-}
-
-.contact-input {
-  width: 30vw;
-  height: 8vh;
-  border: 2px solid var(--dark);
-  outline: none;
-  padding-left : 2vw;
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--dark);
-  border-radius: 50px;
-  justify-items: center;
 }
