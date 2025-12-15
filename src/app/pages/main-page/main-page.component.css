@@ -30,14 +30,15 @@ section h2 {
 
   padding: 0;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .pres-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10vw;
+  padding: 5vh 5vw;
   font-weight: 500;
   font-size: 1.4rem;
 }
@@ -69,8 +70,8 @@ section h2 {
 .contact-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 4vh;
+  align-items: start;
+  padding: 4vh 0 2vh 0;
   gap: 2vw;
 }
 
@@ -87,7 +88,7 @@ section h2 {
   box-shadow: 0 0 20px #113768;
 
   color: white;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 600;
   transition: transform 0.3s ease-in-out;
 }
@@ -109,7 +110,7 @@ section h2 {
   box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
 
   color: white;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 600;
   transition: transform 0.3s ease-in-out;
 }
@@ -123,7 +124,6 @@ section h2 {
   align-items: center;
   justify-content: center;
   gap: 1vw;
-  margin-top: 1vw;
 }
 
 .icon {
@@ -175,7 +175,7 @@ section h2 {
   width: 4vw;
   height: 4px;
   background-color: blue;
-  box-shadow: 0 0 5px #113768;
+  box-shadow: 0 0 10px blue;
   border: none;
 }
 
@@ -257,4 +257,69 @@ section h2 {
   font-size: 1rem;
   font-weight: 500;
   color: #cccccc;
+}
+
+@media (max-width: 767px) {
+  .title {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10vh;
+  }
+
+  .pres {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .my-work, .get-in-touch {
+    width: 100%;
+  }
+
+  .links {
+    gap: 4vw;
+    margin: 2vw 0;
+  }
+
+  .icon {
+    width: 10vw;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .about-me hr {
+    width: 10vw;
+    box-shadow: 0 0 10px blue;
+  }
+
+  .large-card {
+    grid-row: unset;
+    grid-column: unset;
+    height: auto;
+  }
+
+  .cards-grid-right {
+    grid-column: 1 / span 2;
+    grid-row: unset;
+
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1vh;
+    gap: 2vw;
+  }
+
+  .card {
+    padding: 4vw;
+    min-height: auto;
+  }
 }
