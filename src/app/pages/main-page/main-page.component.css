@@ -167,7 +167,8 @@ section h2 {
 }
 
 .about-me hr {
-  margin: 1.5vh;
+  margin-top: 1.5vh;
+  margin-bottom: 4vh;
   width: 4vw;
   height: 4px;
   background-color: blue;
@@ -282,7 +283,8 @@ section h2 {
 }
 
 .my-skills hr {
-  margin: 1.5vh;
+  margin-top: 1.5vh;
+  margin-bottom: 4vh;
   width: 4vw;
   height: 4px;
   background-color: blue;
@@ -320,7 +322,7 @@ section h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 
@@ -425,5 +427,14 @@ section h2 {
   .card {
     padding: 4vw;
     min-height: auto;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-card {
+    min-height: 30vh;
   }
 }
