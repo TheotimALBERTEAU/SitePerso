@@ -66,19 +66,19 @@
   display: flex;
   align-items: center;
   padding: 1.5vh 2.5vw;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--neutral);
   gap: 1vw;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(90deg, var(--dark), var(--secondary));
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   cursor: pointer;
 }
 
 .submit-arrow {
   display: flex;
-  width: 1.5vw;
-  height: 3vh;
+  width: 2.5vw;
+  max-width: 30px;
 }
 
 .contact-right img {
