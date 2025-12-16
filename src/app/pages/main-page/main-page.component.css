@@ -438,4 +438,8 @@ section h2 {
   .skill-card {
     min-height: 30vh;
   }
+
+  .skill-card-value img {
+    width: 3vw;
+  }
 }
