@@ -427,7 +427,7 @@ section h2 {
 
   .card {
     padding: 4vw;
-    min-height: auto;
+    min-height: 100%;
   }
 
   .skills-container {
