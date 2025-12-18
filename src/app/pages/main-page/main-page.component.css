@@ -425,6 +425,74 @@ section hr {
   overflow: hidden;
 }
 
+.my-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  padding: 5vh 5vw;
+
+  background: linear-gradient(90deg, var(--primary), var(--dark));
+  color: white;
+  overflow: hidden;
+}
+
+.my-projects h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.my-projects span:after {
+  content: "Projets";
+  color: blue;
+  text-shadow: darkblue 0 0 7px;
+}
+
+.categs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.categs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-button {
+  min-width: 10vw;
+  min-height: 5vh;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 7px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 0 0 2px white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.value-button:hover,
+.value-button:focus,
+.value-button.active-filter {
+  transform: scale(1.05);
+  background-color: blue;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
 @media (max-width: 767px) {
   html {
     overflow: hidden;

@@ -290,5 +290,33 @@
       <span></span>
     </h1>
     <hr>
+    <div class="categs-container">
+      <div class="categs">
+        <div class="value">
+          <button #defaultProjectButton
+                  [ngClass]="{'active-filter': activeFilter === 'all'}"
+                  class="value-button"
+                  (click)="OnClickFilter('all')">All projects</button>
+        </div>
+        <div class="value">
+          <button [ngClass]="{'active-filter': activeFilter === 'MEAN'}"
+                  class="value-button"
+                  (click)="OnClickFilter('MEAN')">MEAN Stack</button>
+        </div>
+        <div class="value">
+          <button [ngClass]="{'active-filter': activeFilter === 'python'}"
+                  class="value-button"
+                  (click)="OnClickFilter('python')">Python</button>
+        </div>
+        <div class="value">
+          <button [ngClass]="{'active-filter': activeFilter === 'C#'}"
+                  class="value-button"
+                  (click)="OnClickFilter('C#')">C#</button>
+        </div>
+      </div>
+      <div class="projects-container">
+        <p>appel api en fonction des projets sélectionnés</p>
+      </div>
+    </div>
   </div>
 </section>
