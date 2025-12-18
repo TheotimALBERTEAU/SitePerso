@@ -10,23 +10,21 @@
 
       <div class="dropdown-menu" [class.is-open]="isMenuOpen()">
 
+        <a href="#home">Accueil</a>
+
         <a href="#about-me">A propos</a>
 
-        <div class="header_separator"></div>
-
         <a href="#my-skills">Compétences</a>
+
+        <a href="#my-projects">Projets</a>
 
         <div class="header_separator"></div>
 
         <button class="header_button cv" (click)="onClickCV()">
-          <img class="header_button_logo" src="Assets/CV/cv.png">
             Voir mon CV
         </button>
 
-        <div class="header_separator"></div>
-
         <button class="header_button contact" (click)="onClickContact()">
-          <img class="header_button_logo" src="Assets/Contact/contact.png">
             Me Contacter
         </button>
 

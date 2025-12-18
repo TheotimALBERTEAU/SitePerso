@@ -235,7 +235,7 @@ section h2 {
   text-shadow: darkblue 0 0 7px;
 }
 
-.about-me hr {
+section hr {
   margin-top: 1.5vh;
   margin-bottom: 4vh;
   width: 4vw;
@@ -351,16 +351,6 @@ section h2 {
   font-size: 4rem;
 }
 
-.my-skills hr {
-  margin-top: 1.5vh;
-  margin-bottom: 4vh;
-  width: 4vw;
-  height: 4px;
-  background-color: blue;
-  box-shadow: 0 0 10px blue;
-  border: none;
-}
-
 .skills-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -436,6 +426,10 @@ section h2 {
 }
 
 @media (max-width: 767px) {
+  html {
+    overflow: hidden;
+  }
+
   .title {
     flex-direction: column;
     text-align: center;
@@ -445,6 +439,11 @@ section h2 {
   .pres {
     flex-direction: column;
     text-align: center;
+    padding: 3vh 0;
+  }
+
+  .pres-text {
+    padding: 0.2vh 5vw
   }
 
   .contact-container {
@@ -453,6 +452,7 @@ section h2 {
     gap: 3vw;
     width: 80%;
     margin: 0 auto;
+    padding-top: 1vh;
   }
 
   .my-work, .get-in-touch {
@@ -468,13 +468,86 @@ section h2 {
     width: 10vw;
   }
 
+  .email-icon {
+    padding: 1vw;
+    cursor: default;
+  }
+
+  .oval-pin {
+    width: 4vw;
+    height: 3vh;
+    border: 2px solid blue;
+    border-radius: 90px;
+    overflow: hidden;
+    position: absolute;
+    background-color: transparent;
+    bottom: 1vh;
+  }
+
+  .ball {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: rgba(0, 0, 255, 0.4);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    z-index: 1;
+    animation: move-ball-mobile 7s infinite alternate ease-in-out;
+  }
+
+  .trail {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    animation: move-trail-mobile 7s infinite alternate ease-in-out;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes move-ball-mobile {
+    0% {
+      transform: translate(-50%, 0);
+    }
+
+    50% {
+      transform: translate(-50%, -1vh);
+    }
+
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @keyframes move-trail-mobile {
+    0% {
+      transform: translate(-50%, 0);
+      opacity: 0.2;
+    }
+
+    50% {
+      transform: translate(-50%, -1vh);
+      opacity: 0.15;
+    }
+
+    100% {
+      transform: translate(-50%, 0);
+      opacity: 0.1;
+    }
+  }
+
   .cards-container {
     display: flex;
     flex-direction: column;
     width: 90%;
   }
 
-  .about-me hr {
+  section hr {
     width: 10vw;
     box-shadow: 0 0 10px blue;
   }
