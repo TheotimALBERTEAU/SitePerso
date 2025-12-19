@@ -156,7 +156,7 @@ section h2 {
 .ball {
   width: 0.8vw;
   height: 0.8vw;
-  background-color: rgba(0, 0, 255, 0.4);
+  background-color: rgba(0, 0, 255, 0.8);
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -185,7 +185,7 @@ section h2 {
   }
 
   50% {
-    transform: translate(-50%, -2vh);
+    transform: translate(-50%, -1.5vh);
   }
 
   100% {
@@ -200,7 +200,7 @@ section h2 {
   }
 
   50% {
-    transform: translate(-50%, -2vh);
+    transform: translate(-50%, -1.5vh);
     opacity: 0.15;
   }
 
@@ -374,7 +374,7 @@ section hr {
   text-align: center;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  height: 10vh;
+  min-height: 10vh;
 }
 
 .skill-card-value {
@@ -481,6 +481,7 @@ section hr {
   font-weight: 600;
   text-shadow: 0 0 2px white;
   transition: transform 0.2s ease-in-out;
+  overflow-x: visible;
 }
 
 .value-button:hover,
@@ -489,6 +490,7 @@ section hr {
   transform: scale(1.05);
   background-color: blue;
   border: 3px solid rgba(255, 255, 255, 0.3);
+  overflow-x: visible;
 }
 
 
@@ -504,10 +506,14 @@ section hr {
     margin-top: 10vh;
   }
 
+  .title span:after {
+    font-size: 3rem !important;
+  }
+
   .pres {
     flex-direction: column;
     text-align: center;
-    padding: 3vh 0;
+    padding: 1vh 0;
   }
 
   .pres-text {
@@ -520,7 +526,7 @@ section hr {
     gap: 3vw;
     width: 80%;
     margin: 0 auto;
-    padding-top: 1vh;
+    padding-top: 0.1vh;
   }
 
   .my-work, .get-in-touch {
@@ -529,7 +535,7 @@ section hr {
 
   .links {
     gap: 4vw;
-    margin: 2vw 0;
+    margin: 2vh 0 5vh 0;
   }
 
   .icon {
@@ -555,7 +561,7 @@ section hr {
   .ball {
     width: 1.5vw;
     height: 1.5vw;
-    background-color: rgba(0, 0, 255, 0.4);
+    background-color: rgba(0, 0, 255, 0.8);
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -584,7 +590,7 @@ section hr {
     }
 
     50% {
-      transform: translate(-50%, -1vh);
+      transform: translate(-50%, -0.5vh);
     }
 
     100% {
@@ -599,7 +605,7 @@ section hr {
     }
 
     50% {
-      transform: translate(-50%, -1vh);
+      transform: translate(-50%, -0.5vh);
       opacity: 0.15;
     }
 
