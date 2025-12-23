@@ -21,6 +21,10 @@
   margin-left: 0.5vh;
 }
 
+.header_logo {
+  cursor: default;
+}
+
 .header_right {
   display: flex;
   justify-content: flex-end;
