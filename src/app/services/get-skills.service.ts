@@ -9,7 +9,7 @@ export class GetSkillsService {
   constructor(public http: HttpClient) {
   }
 
-  public ApiUrl = 'http://141.145.204.147:3000/';
+  public ApiUrl = 'https://hessflix.ddns.net:8443/api/';
 
   GetSkills() {
     return this.http.get<any>(`${this.ApiUrl}skills`)
