@@ -5,6 +5,7 @@
   --neutral: #7F8C8D;   /* Texte secondaire/Détails */
   --accent: #34495E;    /* Fond principal (header_container) */
   --dark: #000413;      /* Fond de pied de page/Ombres */
+  --title: #6161FF;
 }
 
 * {
