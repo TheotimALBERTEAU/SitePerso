@@ -9,9 +9,9 @@ export class GetSkillsService {
   constructor(public http: HttpClient) {
   }
 
-  public ApiUrl = 'https://hessflix.ddns.net:8443/api/';
+  public ApiUrl = 'http://localhost:3000';
 
   GetSkills() {
-    return this.http.get<any>(`${this.ApiUrl}skills`)
+    return this.http.get<any>(`${this.ApiUrl}/skills`)
   }
 }
