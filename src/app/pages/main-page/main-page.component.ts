@@ -2,8 +2,10 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild, NgModule} from 
 import {CommonModule, NgClass} from '@angular/common';
 import {AppComponent} from '../../app.component';
 import {GetSkillsService} from '../../services/get-skills.service';
+import {GetProjectService} from '../../services/get-project.service';
 import { HttpResponse } from '@angular/common/http';
 import {HttpClientModule} from '@angular/common/http';
+import {filter} from 'rxjs';
 
 @Component({
   selector: 'app-main-page',
@@ -17,10 +19,13 @@ import {HttpClientModule} from '@angular/common/http';
 
 export class MainPageComponent {
   constructor(public appComponent: AppComponent,
-              private getSkills: GetSkillsService) {
+              private getSkills: GetSkillsService,
+              private getProjects: GetProjectService) {
   }
 
   public skills : any[] = []
+  public projects : any[] = []
+  public categories : any[] = []
 
   ngOnInit() {
     this.getSkills.GetSkills().subscribe({
@@ -30,6 +35,22 @@ export class MainPageComponent {
         }
       }
     });
+
+    this.getProjects.GetProjects().subscribe({
+      next: data => {
+        if (data.code === 200) {
+          this.projects = data.data;
+        }
+      }
+    });
+
+    this.getProjects.GetCategories().subscribe({
+      next: data => {
+        if (data.code === 200) {
+          this.categories = data.data;
+        }
+      }
+    })
   }
 
   @ViewChild('defaultProjectButton') defaultButtonRef: ElementRef | undefined;
@@ -46,5 +67,23 @@ export class MainPageComponent {
 
   OnClickFilter(filterName: string): void {
     this.activeFilter = filterName;
+
+    if (filterName === 'all') {
+      this.getProjects.GetProjects().subscribe({
+        next: data => {
+          if (data.code === 200) {
+            this.projects = data.data;
+          }
+        }
+      })
+    } else {
+      this.getProjects.GetProjectCategory(filterName).subscribe({
+        next: data => {
+          if (data.code === 200) {
+            this.projects = data.data;
+          }
+        }
+      })
+    }
   }
 }

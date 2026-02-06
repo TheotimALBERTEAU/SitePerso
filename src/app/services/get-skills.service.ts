@@ -9,9 +9,9 @@ export class GetSkillsService {
   constructor(public http: HttpClient) {
   }
 
-  public ApiUrl = 'http://localhost:3000';
+  public ApiUrlSkills = 'http://localhost:3000/skills';
 
   GetSkills() {
-    return this.http.get<any>(`${this.ApiUrl}/skills`)
+    return this.http.get<any>(`${this.ApiUrlSkills}`)
   }
 }
