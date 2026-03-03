@@ -537,6 +537,30 @@ section hr {
   width: 45%;
 }
 
+.experience-icon-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+
+.experience-icon {
+  width: 2.5vw;
+
+  padding: 0.5rem;
+
+  background-color: var(--title);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.experience-icon-title {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+}
+
 .exp-card {
   display: flex;
   flex-direction: column;
@@ -544,7 +568,7 @@ section hr {
   padding: 4vh 2vw;
   margin: 2vw;
   min-height: 30vh;
-  min-width: 30vw;
+  width: 35vw;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -580,13 +604,14 @@ section hr {
   width: 60%;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-
+  align-self: start;
+  margin-bottom: 1vh;
 }
 
 .experience-highlights-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 2vh 1vw;
   font-size: 1.1rem;
 }
