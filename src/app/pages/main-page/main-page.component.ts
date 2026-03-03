@@ -6,6 +6,8 @@ import {GetProjectService} from '../../services/get-project.service';
 import { HttpResponse } from '@angular/common/http';
 import {HttpClientModule} from '@angular/common/http';
 import {filter} from 'rxjs';
+import {GetExperienceService} from '../../services/get-experience.service';
+import {GetEducationService} from '../../services/get-education.service';
 
 @Component({
   selector: 'app-main-page',
@@ -20,12 +22,16 @@ import {filter} from 'rxjs';
 export class MainPageComponent {
   constructor(public appComponent: AppComponent,
               private getSkills: GetSkillsService,
-              private getProjects: GetProjectService) {
+              private getProjects: GetProjectService,
+              private getExperiences: GetExperienceService,
+              private getEducation: GetEducationService) {
   }
 
   public skills : any[] = []
   public projects : any[] = []
   public categories : any[] = []
+  public experiences : any[] = []
+  public educations : any[] = []
 
   ngOnInit() {
     this.getSkills.GetSkills().subscribe({
@@ -48,6 +54,22 @@ export class MainPageComponent {
       next: data => {
         if (data.code === 200) {
           this.categories = data.data;
+        }
+      }
+    });
+
+    this.getExperiences.GetExperiences().subscribe({
+      next: data => {
+        if (data.code === 200) {
+          this.experiences = data.data;
+        }
+      }
+    });
+
+    this.getEducation.GetEducation().subscribe({
+      next: data => {
+        if (data.code === 200) {
+          this.educations = data.data;
         }
       }
     })

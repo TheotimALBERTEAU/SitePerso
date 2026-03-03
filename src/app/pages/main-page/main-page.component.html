@@ -175,12 +175,72 @@
   </div>
 </section>
 
-<section class="experience-and-education">
-  <div class="experience">
+<section class="experience-education" id="experience-education">
+  <h1 class="title">Mon
+    <span></span>
+  </h1>
+  <hr>
+  <div class="exp-educ-container">
+    <div class="experience">
+      @for (experience of this.experiences; track experience) {
+        <div class="exp-card">
 
-  </div>
+          <div class="experience-title">
+            <h3>{{ experience.title }}</h3>
+          </div>
 
-  <div class="education">
+          <div class="experience-subtitles">
+            <div class="experience-company">
+              {{ experience.company }}
+            </div>
+            <div class="experience-period">
+              {{ experience.period }}
+            </div>
+          </div>
+          <hr>
 
+          <div class="experience-highlights-list">
+            <ul>
+            @for (highlight of experience.highlights; track highlight) {
+              <div class="experience-highlight">
+                <li>
+                  <h4>{{ highlight }}</h4>
+                </li>
+              </div>
+            }
+            </ul>
+          </div>
+
+          <div class="experience-technologies">
+            @for (technologie of experience.technologies; track technologie) {
+              <div class="experience-technologie-title">
+                <h5>{{technologie}}</h5>
+              </div>
+            }
+
+          </div>
+
+
+        </div>
+      }
+    </div>
+
+    <div class="education">
+      @for (education of this.educations; track education) {
+        <div class="educ-card">
+          <div class="education-degree">
+            {{ education.degree }}
+          </div>
+          <div class="education-subtitles">
+            <div class="education-university">
+              {{ education.university }}
+            </div>
+            <div class="education-period">
+              {{ education.period }}
+            </div>
+          </div>
+        </div>
+      }
+    </div>
   </div>
 </section>
