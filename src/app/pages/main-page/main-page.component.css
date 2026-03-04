@@ -364,6 +364,11 @@ section hr {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   min-height: 50vh;
   padding: 2vh;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
 }
 
 .skill-card-title {
@@ -431,7 +436,7 @@ section hr {
   align-items: center;
 
   height: 100%;
-  padding: 3vh 0;
+  padding: 5vh 0;
 
   background: linear-gradient(90deg, var(--primary), var(--dark));
   color: white;
@@ -441,12 +446,14 @@ section hr {
 .my-projects h1 {
   font-weight: 600;
   font-size: 3rem;
+  margin-bottom: 0.2rem;
 }
 
 .my-projects span:after {
   content: "Projets";
   color: var(--title);
   text-shadow: darkblue 0 0 7px;
+  font-size: 4rem;
 }
 
 .categs-container {

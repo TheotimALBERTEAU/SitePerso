@@ -8,12 +8,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {filter} from 'rxjs';
 import {GetExperienceService} from '../../services/get-experience.service';
 import {GetEducationService} from '../../services/get-education.service';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
   imports: [
     CommonModule,
     HttpClientModule,
+    RouterLink,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
@@ -111,5 +113,12 @@ export class MainPageComponent {
 
   OnClickeGoProjectGithub(project: any): void {
     window.open(`${project.sourceCodeUrl}`, '_blank');
+  }
+
+  GoToProjects(): void {
+    const element = document.getElementById('my-projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
