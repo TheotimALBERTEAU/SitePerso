@@ -108,4 +108,8 @@ export class MainPageComponent {
       })
     }
   }
+
+  OnClickeGoProjectGithub(project: any): void {
+    window.open(`${project.sourceCodeUrl}`, '_blank');
+  }
 }
