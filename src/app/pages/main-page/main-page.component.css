@@ -502,12 +502,13 @@ section hr {
 .project-card {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: color-mix(in srgb, var(--title), transparent 95%);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   position: relative;
   transition: transform 0.2s ease;
+  height: 45vh;
 }
 
 .project-card:hover {
@@ -515,11 +516,11 @@ section hr {
 }
 
 .project-card-img {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 25vh;
   z-index: 1;
 }
 
@@ -586,6 +587,48 @@ section hr {
 
 .project-github-link img:hover {
   background-color: var(--title);
+}
+
+.project-card-title,
+.project-card-desc,
+.project-card-technologies {
+  position: relative;
+  z-index: 3;
+  color: white;
+  padding: 0 15px;
+}
+
+.project-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.project-card:hover .project-card-title {
+  color: var(--title);
+}
+
+.project-card-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.project-card-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.project-technologie {
+  background-color: var(--title);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .experience-education {
