@@ -672,7 +672,8 @@ section hr {
 .exp-educ-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: start;
 }
 
 .experience {
@@ -710,6 +711,7 @@ section hr {
 .exp-card {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   padding: 4vh 2vw;
   margin: 2vw;
@@ -719,6 +721,30 @@ section hr {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.exp-card::before {
+  content: "";
+  position: absolute;
+  left: -2rem; /* Ajustez selon l'alignement souhaité sous l'icône */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--title);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--title);
+}
+
+.exp-card::after {
+  content: "";
+  position: absolute;
+  left: -2.4rem; /* Centré sur le trait (ajuster selon l'épaisseur) */
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--title);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--title);
 }
 
 .experience-title {
@@ -808,7 +834,133 @@ section hr {
   justify-content: center;
   align-items: center;
   width: 45%;
+}
 
+.education-icon-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+
+.education-icon {
+  width: 2.5vw;
+
+  padding: 0.5rem;
+
+  background-color: var(--title);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.education-icon-title {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+}
+
+.educ-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: 4vh 2vw;
+  margin: 2vw 2vw 2vw calc(1.25vw + 1rem);
+  min-height: 30vh;
+  width: 35vw;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.educ-card::before {
+  content: "";
+  position: absolute;
+  left: -2rem; /* Ajustez selon l'alignement souhaité sous l'icône */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--title);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--title);
+}
+
+.educ-card::after {
+  content: "";
+  position: absolute;
+  left: -2.4rem; /* Centré sur le trait (ajuster selon l'épaisseur) */
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--title);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--title);
+}
+
+.education-degree {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.education-subtitles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+}
+
+.education-university {
+  color: var(--title);
+  padding-right: 0.5vw;
+  font-size: 1.2rem;
+}
+
+.education-period {
+  font-size: 1rem;
+}
+
+.educ-card hr {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  align-self: start;
+  margin-bottom: 1vh;
+}
+
+.education-highlights-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2vh 1vw;
+  font-size: 1.1rem;
+}
+
+.education-highlight {
+  margin-bottom: 0.5vw;
+}
+
+.education-highlights-list ul {
+  list-style-type: none;
+}
+
+.education-highlight li {
+  display: flex;
+  flex-direction: row;
+}
+
+.education-highlight h4 {
+  font-weight: 500;
+}
+
+.education-highlights-list li::before {
+  content: "•";
+  color: rgba(255, 255, 255, 0.3);
+  padding-right: 0.5vw;
 }
 
 @media (max-width: 767px) {

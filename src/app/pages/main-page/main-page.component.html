@@ -258,11 +258,16 @@
     </div>
 
     <div class="education">
+      <div class="education-icon-container">
+        <img src="/Assets/exp-educ-icons/educ-icon.png" alt="education-icon" class="education-icon">
+        <h2 class="education-icon-title">Mon Parcours</h2>
+      </div>
       @for (education of this.educations; track education) {
         <div class="educ-card">
           <div class="education-degree">
-            {{ education.degree }}
+            <h3>{{ education.degree }}</h3>
           </div>
+
           <div class="education-subtitles">
             <div class="education-university">
               {{ education.university }}
@@ -270,6 +275,19 @@
             <div class="education-period">
               {{ education.period }}
             </div>
+          </div>
+          <hr>
+
+          <div class="education-highlights-list">
+            <ul>
+            @for (highlight of education.highlights; track highlight) {
+              <div class="education-highlight">
+                <li>
+                  <h4>{{highlight}}</h4>
+                </li>
+              </div>
+            }
+            </ul>
           </div>
         </div>
       }
