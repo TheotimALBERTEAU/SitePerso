@@ -121,4 +121,11 @@ export class MainPageComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+
+  GoToContact(): void {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
