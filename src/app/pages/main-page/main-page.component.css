@@ -963,6 +963,111 @@ section hr {
   padding-right: 0.5vw;
 }
 
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 5vw;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--dark));
+  color: white;
+}
+
+.contact-section h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.contact-section span:after {
+  content: "Contacter";
+  color: var(--title);
+  text-shadow: darkblue 0 0 7px;
+}
+
+.contact-section hr {
+  display: flex;
+  align-self: center;
+}
+
+.contact-container {
+  display: flex;
+
+  margin-top: -4vh;
+  height: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2vh;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 20vw;
+  height: 0.5rem;
+  background: linear-gradient(90deg, var(--dark), var(--secondary));
+  border-radius: 10px;
+}
+
+.contact-inputs {
+  width: 30vw;
+  height: 8vh;
+  border: none;
+  outline: none;
+  padding-left : 2vw ;
+  font-weight: 500;
+  color: var(--dark);
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  height: 20vh;
+  padding-top: 2vh;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus {
+  border: 4px solid var(--dark);
+}
+
+.contact-inputs::placeholder {
+  color: var(--neutral);
+}
+
+.contact-submit {
+  display: flex;
+  align-items: center;
+  padding: 1.5vh 2.5vw;
+  font-size: 1.2rem;
+  color: var(--neutral);
+  gap: 1vw;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  cursor: pointer;
+}
+
+.submit-arrow {
+  display: flex;
+  width: 2.5vw;
+  max-width: 30px;
+}
+
+.contact-right img {
+  width: 30vw;
+}
+
 @media (max-width: 767px) {
   html {
     overflow: hidden;

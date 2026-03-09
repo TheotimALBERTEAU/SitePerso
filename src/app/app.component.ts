@@ -25,10 +25,6 @@ export class AppComponent {
     window.open('Assets/CV/cv.pdf')
   }
 
-  onClickContact() {
-    this.router.navigate(['/Contact'])
-  }
-
   onClickHome() {
     this.router.navigate(['/TheotimAlberteau'])
   }
