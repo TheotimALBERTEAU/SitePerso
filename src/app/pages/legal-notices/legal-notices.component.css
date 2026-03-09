@@ -22,7 +22,7 @@ body, html {
 }
 
 .legal-container {
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 4vh 3vw;
   background-color: rgba(255, 255, 255, 0.05); /* Fond subtil */

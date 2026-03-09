@@ -140,7 +140,7 @@ footer {
   opacity: 0.7;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .header_right {
     gap: 0;
     height: auto;
@@ -159,11 +159,10 @@ footer {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 30%;
-    background-color: var(--dark);
+    width: 100%;
+    min-height: 100%;
+    background-color: color-mix(in srgb, var(--dark), transparent 20%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-    max-height: 0;
     opacity: 0;
     overflow: hidden;
     transform: translateY(0px);

@@ -5,30 +5,31 @@
     </div>
 
     <div class="header_right">
+        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation"> {{ menuIcon() }} </button>
 
-      <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation"> {{ menuIcon() }} </button>
+      @if (shouldShowMenu()) {
+        <div class="dropdown-menu" [class.is-open]="isMenuOpen()">
 
-      <div class="dropdown-menu" [class.is-open]="isMenuOpen()">
+          <a href="#home">Accueil</a>
 
-        <a href="#home">Accueil</a>
+          <a href="#about-me">A propos</a>
 
-        <a href="#about-me">A propos</a>
+          <a href="#my-skills">Compétences</a>
 
-        <a href="#my-skills">Compétences</a>
+          <a href="#my-projects">Projets</a>
 
-        <a href="#my-projects">Projets</a>
+          <a href="#experience-education">Experiences</a>
 
-        <a href="#experience-education">Experiences</a>
+          <a href="#contact">Contact</a>
 
-        <a href="#contact">Contact</a>
+          <div class="header_separator"></div>
 
-        <div class="header_separator"></div>
+          <button class="header_button cv" (click)="onClickCV()">
+              Voir mon CV
+          </button>
 
-        <button class="header_button cv" (click)="onClickCV()">
-            Voir mon CV
-        </button>
-
-      </div>
+        </div>
+      }
     </div>
   </div>
 </header>
