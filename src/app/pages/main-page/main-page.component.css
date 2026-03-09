@@ -1005,14 +1005,21 @@ section hr {
   gap: 2vh;
 }
 
-.contact-left-title h2 {
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2vh;
+}
+
+.contact-right-title h2 {
   font-weight: 600;
   color: white;
   font-size: 2rem;
   margin-bottom: 1vh;
 }
 
-.contact-left-title hr {
+.contact-right-title hr {
   border: none;
   width: 20vw;
   height: 0.5rem;
@@ -1031,7 +1038,7 @@ section hr {
   border-radius: 50px;
 }
 
-.contact-left textarea {
+.contact-right textarea {
   height: 20vh;
   padding-top: 2vh;
   border-radius: 20px;
@@ -1064,10 +1071,6 @@ section hr {
   max-width: 30px;
 }
 
-.contact-right img {
-  width: 30vw;
-}
-
 @media (max-width: 767px) {
   html {
     overflow: hidden;
@@ -1093,7 +1096,7 @@ section hr {
     padding: 0.2vh 5vw
   }
 
-  .contact-container {
+  .pres-contact-container {
     display: flex;
     flex-direction: column;
     gap: 3vw;
