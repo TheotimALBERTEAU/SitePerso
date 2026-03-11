@@ -1,8 +1,14 @@
 services:
   angular:
     build: .
-    ports:
-      - "4200:4200"
+    container_name: mon_front
+    restart: always
     volumes:
       - .:/app
       - /app/node_modules
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    external: true
