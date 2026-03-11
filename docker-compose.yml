@@ -1,7 +1,7 @@
 services:
   angular:
     build: .
-    container_name: mon_front
+    container_name: siteperso-angular-1
     restart: always
     volumes:
       - .:/app
