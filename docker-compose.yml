@@ -6,6 +6,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    ports:
+      - "4200:4200"
     networks:
       - web-network
 
