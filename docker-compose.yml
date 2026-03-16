@@ -2,7 +2,6 @@ services:
   angular:
     build: .
     container_name: siteperso-angular-1
-    restart: always
     volumes:
       - .:/app
       - /app/node_modules
