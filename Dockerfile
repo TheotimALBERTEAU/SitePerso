@@ -8,5 +8,5 @@ RUN npm run build --configuration=production
 
 # Stage 2: Serve avec Nginx
 FROM nginx:alpine
-COPY --from=build /app/dist/ton-nom-de-projet/browser /usr/share/nginx/html
+COPY --from=build /app/dist/SitePerso/browser /usr/share/nginx/html
 EXPOSE 80
