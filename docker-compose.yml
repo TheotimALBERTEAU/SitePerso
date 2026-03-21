@@ -1,10 +1,5 @@
 services:
   angular:
-    build: .
-    container_name: siteperso-angular-1
-    volumes:
-      - .:/app
-      - /app/node_modules
-    command: ["npx", "ng", "serve", "--host", "0.0.0.0", "--disable-host-check"]
-    ports:
-      - "4200:4200"
+    build:
+      context: .
+      target: development
