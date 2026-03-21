@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'any'
@@ -9,9 +10,9 @@ export class GetSkillsService {
   constructor(public http: HttpClient) {
   }
 
-  public ApiUrlSkills = 'http://localhost:3000/skills';
+  private readonly ApiUrl= environment.apiUrl;
 
   GetSkills() {
-    return this.http.get<any>(`${this.ApiUrlSkills}`)
+    return this.http.get<any>(`${this.ApiUrl}/skills`)
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'any'
@@ -9,17 +10,17 @@ export class GetProjectService {
   constructor(public http: HttpClient) {
   }
 
-  public ApiUrlProjects = 'http://localhost:3000/projects';
+  private readonly ApiUrl= environment.apiUrl;
 
   GetProjects() {
-    return this.http.get<any>(`${this.ApiUrlProjects}`)
+    return this.http.get<any>(`${this.ApiUrl}/projects`);
   }
 
   GetProjectCategory(category: string) {
-    return this.http.get<any>(`${this.ApiUrlProjects}/${category}`)
+    return this.http.get<any>(`${this.ApiUrl}/projects/${category}`)
   }
 
   GetCategories() {
-    return this.http.get<any>(`${this.ApiUrlProjects}/categories`)
+    return this.http.get<any>(`${this.ApiUrl}/projects/categories`)
   }
 }

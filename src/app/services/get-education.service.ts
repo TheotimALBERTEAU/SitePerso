@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'any'
@@ -8,9 +9,9 @@ export class GetEducationService {
   constructor(public http: HttpClient) {
   }
 
-  public ApiUrlProjects = 'http://localhost:3000/education';
+  private readonly ApiUrl= environment.apiUrl;
 
   GetEducation() {
-    return this.http.get<any>(`${this.ApiUrlProjects}`)
+    return this.http.get<any>(`${this.ApiUrl}/education`);
   }
 }
