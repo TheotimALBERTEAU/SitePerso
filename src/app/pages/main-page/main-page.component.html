@@ -119,22 +119,19 @@
           <div class="skill-card-title">
             <h3>{{categ.title}}</h3>
           </div>
-            <div class="skill-card-value">
-              @for (skill of categ.skills; track skill) {
-                <div class="logo">
-                  <img src="{{skill.logoPath}}" alt="{{skill.subtitle}}">
+
+          <div class="skill-grid">
+            @for (skill of categ.skills; track skill) {
+              <div class="skill-item">
+                <div class="skill-logo">
+                  <img [src]="skill.logoPath" [alt]="skill.subtitle">
                 </div>
-                <div class="subtitle">
+                <div class="skill-name">
                   {{skill.subtitle}}
                 </div>
-                <div class="percent">
-                  {{skill.percent}}
-                </div>
-                <div class="progress-bar-container">
-                  <div class="progress-bar" [style.--percent]=skill.percent></div>
-                </div>
-              }
-            </div>
+              </div>
+            }
+          </div>
         </div>
       }
 
