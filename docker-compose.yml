@@ -1,4 +1,6 @@
 services:
-  portfolio_front_angular:
-    build: .
-    container_name: siteperso-angular
+  front-portfolio:
+    build:
+      context: .
+      target: production
+    container_name: front-portfolio
